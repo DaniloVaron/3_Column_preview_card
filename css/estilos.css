@@ -1,0 +1,39 @@
+:root {
+  /* Primario */
+
+  --Naranja_brillante: hsl(31, 77%, 52%);
+  --Cian_oscuro: hsl(184, 100%, 22%);
+  --Cian_muy_oscuro: hsl(179, 100%, 13%);
+
+  /* Neutral */
+
+  --Blanco_transparente: hsla(0, 0%, 100%, 0.75);
+  --Gris_claro: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--Gris_claro);
+}
+
+.container {
+  display: flex;
+  margin: 1em auto;
+  width: 90%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
