@@ -11,10 +11,17 @@
   --Gris_claro: hsl(0, 0%, 95%);
 }
 
-body {
-  font-family: "Big Shoulders Display", cursive;
-  font-family: "Lexend Deca", sans-serif;
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
+body {
+  font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -24,12 +31,137 @@ body {
   background: var(--Gris_claro);
 }
 
+/* Contenedor */
 .container {
-  display: flex;
   margin: 1em auto;
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Responsive del contenedor */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Tarjetas */
+.card {
+  padding: 39px;
+  width: 20%;
+}
+
+/* Responsive de 992px de las tarjetas */
+@media (max-width: 992px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+}
+
+/* Responsive de 576px de las tarjetas */
+@media (max-width: 576px) {
+  .card {
+    width: 80%;
+  }
+}
+
+/* Terjeta 1 */
+.card-1-color {
+  background: var(--Naranja_brillante);
+  border-radius: 8px 0 0 8px;
+}
+
+/* Terjeta 2 */
+.card-2-color {
+  background: var(--Cian_oscuro);
+}
+
+/* Terjeta 3 */
+.card-3-color {
+  background: var(--Cian_muy_oscuro);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Responsive de la tarjeta 1 y 2 */
+@media (max-width: 992px) {
+  .card-1-color {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card-3-color {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+/* Imagenes */
+.imagen {
+  width: 50px;
+}
+
+/* Titulos de cada tarjeta */
+.titulo {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2.2em;
+  color: var(--Gris_claro);
+}
+
+/* Texto de cada tarjeta */
+.texto {
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: var(--Blanco_transparente);
+  height: 180px;
+}
+
+@media (max-width: 992px) {
+  .texto {
+    margin: 0;
+    height: 120px;
+  }
+}
+
+/* Boton de cada tarjeta */
+.boton {
+  font-size: 0.8em;
+  text-transform: capitalize;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: var(--Gris_claro);
+  border: 2px solid var(--Gris_claro);
+}
+
+/* Hover de los botones */
+.boton:hover {
+  background: transparent;
+  color: var(--Blanco_transparente);
+  transition: 0.3s;
+}
+
+/* Boton 1 */
+.boton-text-1 {
+  color: var(--Naranja_brillante);
+}
+
+/* Boton 2 */
+.boton-text-2 {
+  color: var(--Cian_oscuro);
+}
+
+/* Boton 3 */
+.boton-text-3 {
+  color: var(--Cian_muy_oscuro);
+}
+
+/* Otro */
 .attribution {
   font-size: 11px;
   text-align: center;
